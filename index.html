@@ -27,8 +27,24 @@
   <meta property=”og:type” content=”article”/>
   
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $("html").on("submit","#email",function(e){
+    e.preventDefault();
+    $("#send_form_status").html('').hide();
+    var data=$("#contact_form").serialize();
+    $.post("/send_form.php",data,function(res){
+      $("#send_form_status").html(res.msg).show();
+      if(res.status==1){ 
+        $("#contact_form")[0].reset();
+      } 
+    });
+  });
+});
+</script>
   <script src="script.js"></script>
+    
 </head>
 
 <body >
@@ -72,12 +88,13 @@
   <div class="wrap">
  <main>
     <section id="courses">
+         <h1 id="hey">Hello</h1>
+          <h2 id="hey2">It's me, Lukasz</h2>
+                <img id=pproject src="pproject.png" />
       <section class="description" id="opis">
-        <img src="pproject.png" height=300px width=300px/>
-        <p> I am the founder of the Pasek Projekt brand, operating in the IT industry.
-          By passion I'm programmer who is fascinating possibilities, what programming give a people – starts from building interfaces, user experience, in the end to data science. I belong to group of people who are interested in everything, who are happy when they are looking for answers and resolving problems on their way. </p>
+        <p> 
+         By passion I'm programmer who is fascinating possibilities, what programming give a people – starts from building interfaces, user experience, in the end to data science. I belong to group of people who are interested in everything, who are happy when they are looking for answers and resolving problems on their way. </p>
       </section>
-    
    
     </section>
     
