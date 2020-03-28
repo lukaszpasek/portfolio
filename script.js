@@ -2,7 +2,7 @@
 
 $(document).ready(function (numer) {
  
-  var $opis = $("#opis");
+  var $opis = $("#courses");
   var $portfolio = $("#portfolio");
   var $kontakt = $("#kontakt");
  
