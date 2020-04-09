@@ -124,19 +124,6 @@ div.art p.courseName {
 
 
 
-.stepImg a:link,
-.stepImg a:visited,
-.description a:link,
-.description a:visited {
-  color: #D61F2B;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.stepImg a:hover,
-.description a:hover {
-  text-decoration: underline;
-}
 
 
 
@@ -238,7 +225,7 @@ main {
 
 #courses
 {
-  min-height: 50vh;
+  min-height: 10vh;
   padding-bottom: 5vh;
 }
 
@@ -412,7 +399,7 @@ main {
 
 .description {
   padding: 5vh 30px 10vh;
-  height: 90vh;
+  height: 63vh;
   max-width: 1320px;
   margin: 0 auto;
   
